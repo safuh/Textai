@@ -7,7 +7,7 @@ function Langdetect(){
 	function update(){
 		var text=document.getElementById('text').value;
 		axios({url:`https://blinkr-app.herokuapp.com/langdetect?text=${text}`,
-		method:'GET',})
+			method:'GET',})
 		.then(function(response){
 			text=response.data;
 			setAns(response.data);

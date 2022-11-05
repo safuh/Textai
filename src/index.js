@@ -12,11 +12,8 @@ import Sentiment from './Sentiment';
 import Translate from './Translate';
 import Ans, {loader as AnsLoader,} from './Ans';
 import WebAns, {loader as Webloader} from './WebAns';
-import CorrectAns, {loader as CorrectLoader} from './CorrectAns';
-import DetectAns, {loader as DetectLoader} from './DetectAns';
 import SentimentAns, {loader as SentimentLoader} from './SentimentAns';
-import TranslateAns, {loader as TranslateLoader} from './TranslateAns';
-import {action as SummAction, langtranslate as TranslateAction, sentiment as SentimentAction, langdetect as DetectAction, websumm as WebAction,correct as CorrectAction} from './Actions';
+import {action as SummAction, sentiment as SentimentAction, websumm as WebAction,} from './Actions';
 import {createBrowserRouter, 
 	RouterProvider,
 	Route,} from 'react-router-dom';
@@ -76,20 +73,6 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path:'/correct/result',
-		action:CorrectAction,
-	},
-	{
-		path:'/correctans/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			loader:CorrectLoader,
-			element:<CorrectAns/>
-		}],
-	},
-	{
 		path:'/detect',
 		element:<App/>,
 		children:[
@@ -98,20 +81,6 @@ const router = createBrowserRouter([
 			element:<Langdetect/>
 		},
 		],
-	},
-	{
-		path:'/detect/result',
-		action:DetectAction
-	},
-	{
-		path:'/detectans/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			loader:DetectLoader,
-			element:<DetectAns/>
-		}]
 	},
 	{
 		path:'/getsumm',
@@ -156,20 +125,6 @@ const router = createBrowserRouter([
 			element:<Translate/>
 		},
 		],
-	},
-	{
-		path:'/translate/result',
-		action:TranslateAction
-	},
-	{
-		path:'/translateans/:dest/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			element:<TranslateAns/>,
-			loader:TranslateLoader,
-		},]
 	},
 	{
 		path:'/entity/result',

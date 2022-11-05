@@ -14,34 +14,11 @@ export async function websumm({request,params}){
 	const ans = updates.text;
 	return redirect(`/webans/${ans}`,);
 }
-export async function correct({request,params}){
-	const formData = await request.formData();
-	const updates=Object.fromEntries(formData);
-	var ans = updates.text;
-	alert(ans);
-	const url = `https://blinkr-app.herokuapp.com/correct?text=${ans}`;
-	window.location.replace(url);
-	return null;
-	//return redirect(`/correctans/${ans}`,);
-}
-export async function langdetect({request,params}){
-	const formData = await request.formData();
-	const updates=Object.fromEntries(formData);
-	const ans = updates.text;
-	return redirect(`/detectans/${ans}`,);
-}
 export async function sentiment({request,params}){
 	const formData = await request.formData();
 	const updates=Object.fromEntries(formData);
 	const ans = updates.text;
 	return redirect(`/sentimentans/${ans}`,);
-}
-export async function langtranslate({request,params}){
-	const formData = await request.formData();
-	const updates=Object.fromEntries(formData);
-	const text = updates.text;
-	const dest = updates.dest;
-	return redirect(`/translateans/${dest}/${text}`,);
 }
 
 /*export async function entityextract({request,params}){
