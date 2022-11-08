@@ -30,7 +30,7 @@ function App() {
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/websumm`}>
-            <p className="fs-4 bi-table">Page Summary</p><span className="ms-1 d-none d-sm-inline">Get summary of a web page</span>
+            <p className="fs-4 bi-table">Web Summ</p><span className="ms-1 d-none d-sm-inline">Get summary of a web page</span>
           </Link>
         </li>
         <li>
@@ -52,7 +52,7 @@ function App() {
     </div>
     </div>
 
-    <div className='col-auto col-md-9'>
+    <div className='bg-dark text-white col-auto col-md-9'>
         <div className='container-fluid text-centre'><p className='text-centre'>Explore our APIs</p></div>
           <Outlet/>
         </div>
