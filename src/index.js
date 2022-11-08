@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 		element:<App/>,
 		children:[{
 			index:true,
-			element:<Content/>,
+			element:<Langdetect/>,
 		},
 		]
 	},

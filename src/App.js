@@ -53,7 +53,7 @@ function App() {
     </div>
 
     <div className='col-auto col-md-9'>
-        <div className='container-fluid text-centre'><h1 className='text-centre'>Text Psychic</h1></div>
+        <div className='container-fluid text-centre'><p className='text-centre'>Explore our APIs</p></div>
           <Outlet/>
         </div>
     </div>
