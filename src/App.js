@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div id="sidebar">
-        <Link to={`/home`} ><h1>GenAI</h1></Link>
+        <Link to={`/home`} ><h1>Text Psychic</h1></Link>
         <nav>
           <ul>
             <li>
@@ -20,10 +20,10 @@ function App() {
               <Link to={`/translate`}>Translate a piece of text</Link>
             </li>
             <li>
-              <Link to={`/getsumm`}>Generate abstractive summary.</Link>
+              <Link to={`/websumm`}>Get summary of a web page</Link>
             </li>
             <li>
-              <Link to={`/websumm`}>Get summary of a web page</Link>
+              <Link to={`/getsumm`}>Generate abstractive summary.</Link>
             </li>
             <li>
               <Link to={`/sentiment`}>Perform sentiment analysis on text</Link>
@@ -34,8 +34,7 @@ function App() {
           </ul>
         </nav>
       </div>
-      <div id="detail"
-        className={navigation.state==='loading'?'loading':''}>
+      <div id="detail">
         <Outlet/>
       </div>
     </>
