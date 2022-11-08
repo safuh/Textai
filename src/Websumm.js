@@ -28,10 +28,12 @@ function Websumm(){
 				<label for = 'text'>Input text</label>
 				<input type='text'name='text'id='text'></input>
 			</Form>
-			<button onClick={update}>
-				<span class="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
+			<div>
+				<button onClick={update} className='btn btn-primary'>
+					<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
 				submit
 			</button>
+			</div>
 			<p id = 'ans'>{ans}</p>
 		</div>
 		</>

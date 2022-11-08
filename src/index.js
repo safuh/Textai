@@ -49,20 +49,6 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path:'/websumm/result',
-		action:WebAction,
-	},
-	{
-		path:'webans/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			element:<WebAns/>,
-			loader:Webloader
-		},],
-	},
-	{
 		path:'/correct',
 		element:<App/>,
 		children:[
@@ -103,20 +89,6 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path:'/sentiment/result',
-		action:SentimentAction,
-	},
-	{
-		path:'sentimentans/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			element:<SentimentAns/>,
-			loader:SentimentLoader,
-		}]
-	},
-	{
 		path:'/translate',
 		element:<App/>,
 		children:[
@@ -127,10 +99,6 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path:'/entity/result',
-		action:SummAction,
-	},
-	{
 		path:'/entity',
 		element:<App/>,
 		children:[
@@ -139,20 +107,6 @@ const router = createBrowserRouter([
 			element:<Entity/>
 		},
 		],
-	},
-	{
-		path:'/getsumm/result',
-		action:SummAction,
-	},
-	{
-		path:'/ans/:text',
-		element:<App/>,
-		children:[
-		{
-			index:true,
-			loader:AnsLoader,
-			element:<Ans/>
-		}]
 	},
 	]);
 

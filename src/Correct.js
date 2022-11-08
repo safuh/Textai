@@ -20,7 +20,7 @@ function Correct(){
 		document.getElementById('ans').text = ans;
 	});
 	return (
-		<div>
+		<div >
 			<p>Check on Spelling and autocorrect text input</p>
 			<Form className='form-group'>
 				<div className='row'>
@@ -28,7 +28,7 @@ function Correct(){
 					<textarea name='text'id='text' className='col-sm-9' placeholder='Type Here'></textarea>
 				</div>
 			</Form>
-			<button onClick = {update}>
+			<button onClick = {update} className='btn btn-primary'>
 				<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
 				submit
 			</button>

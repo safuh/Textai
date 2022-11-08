@@ -78,7 +78,8 @@ function Translate(){
 		options.push(<option value={key}>{langcodes[key]}</option>)
 	}
 	return (
-		<div class='container'>
+		<div>
+			<p>text translation</p>
 			<Form className='form-group'>
 			<div className='row'>
 				<label className='col-sm-3' for = 'text'>Input text to translate</label>
@@ -91,8 +92,9 @@ function Translate(){
 					{options}
 				</select>
 			</div>
+			
 			</Form>
-			<button id='button' onClick={update}>
+			<button id='button' className='btn btn-primary' onClick={update}>
 				<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
 				submit
 			</button>

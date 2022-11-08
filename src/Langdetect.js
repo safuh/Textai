@@ -80,10 +80,10 @@ function Langdetect(){
 			<Form className='form-group'>
 				<div className='row'>
 					<label className='col-sm-3' for='text'>Input Text</label>
-					<textarea name='text' className='col-sm-9' id='text' placeholder='Type Here!'></textarea>
+					<textarea name='text' className='col-sm-8' id='text' placeholder='Type Here!'></textarea>
 				</div>
 			</Form>
-			<button onClick={update}>
+			<button className='btn btn-primary' onClick={update}>
 				<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
 				submit
 			</button>
