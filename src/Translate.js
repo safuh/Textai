@@ -80,24 +80,24 @@ function Translate(){
 	return (
 		<div>
 			<p>text translation</p>
-			<Form className='form-group'>
-			<div className='row'>
-				<label className='col-sm-3' for = 'text'>Input text to translate</label>
-				<textarea placeholder='Type here!'className='col-sm-9'type='textarea'name='text' id='text'></textarea>
-			</div>
-			<div className='row'>
-				<label className='col-sm-3' for = 'dest'>
-				Language</label>
-				<select className='col-sm-9' name='dest'id='dest'>
-					{options}
-				</select>
-			</div>
-			
+			<Form>
+				<div className='form-group'>
+					<label for = 'text'>Input text to translate</label>
+					<textarea className='form-control' placeholder='Type here!'cols='36'rows='6'type='textarea'name='text' id='text'></textarea>
+				</div>
+				<div className='form-group'>
+					<label for = 'dest'>
+						Select Language</label>
+					<select className='form-control' name='dest'id='dest'>
+						{options}
+					</select>
+				</div>
+				<button id='button' className='btn btn-primary' onClick={update}>
+					<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
+					submit
+				</button>
 			</Form>
-			<button id='button' className='btn btn-primary' onClick={update}>
-				<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
-				submit
-			</button>
+			
 			<p id = 'anstext'>{ans}</p>
 		</div>
 		);

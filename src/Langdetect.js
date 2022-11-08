@@ -77,10 +77,10 @@ function Langdetect(){
 	return (
 		<div>
 			<p>Detect language used in text</p>
-			<Form className='form-group'>
-				<div className='row'>
-					<label className='col-sm-3' for='text'>Input Text</label>
-					<textarea name='text' className='col-sm-8' id='text' placeholder='Type Here!'></textarea>
+			<Form >
+				<div className='form-group'>
+					<label for='text'>Input Text</label>
+					<textarea rows='6' cols='36' name='text' className='form-control' id='text' placeholder='Type Here!'></textarea>
 				</div>
 			</Form>
 			<button className='btn btn-primary' onClick={update}>

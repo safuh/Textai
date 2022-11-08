@@ -24,16 +24,16 @@ function Websumm(){
 		<>
 		<div>
 			<p>Generate summaries from a web page by extracting key sentences.</p>
-			<Form className='form-group'>
-				<label for = 'text'>Input text</label>
-				<input type='text'name='text'id='text'></input>
-			</Form>
-			<div>
+			<Form>
+				<div className='form-group'>
+					<label for = 'text'>Input text</label>
+					<input className='form-control' type='text'name='text'id='text'></input>
+				</div>
 				<button onClick={update} className='btn btn-primary'>
 					<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
-				submit
-			</button>
-			</div>
+					submit
+				</button>
+			</Form>
 			<p id = 'ans'>{ans}</p>
 		</div>
 		</>

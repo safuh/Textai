@@ -22,16 +22,16 @@ function Correct(){
 	return (
 		<div >
 			<p>Check on Spelling and autocorrect text input</p>
-			<Form className='form-group'>
-				<div className='row'>
-					<label className='col-sm-3' for='text'>Input text</label>
-					<textarea name='text'id='text' className='col-sm-9' placeholder='Type Here'></textarea>
+			<Form >
+				<div className='form-group'>
+					<label  for='text'>Input text</label>
+					<textarea cols='36' rows='6' name='text' className='form-control' id='text'  placeholder='Type Here'></textarea>
 				</div>
-			</Form>
-			<button onClick = {update} className='btn btn-primary'>
+				<button onClick = {update} className='btn btn-primary'>
 				<span className="spinner-border spinner-border-sm" role="status" style={{display:'none'}} id='spinn'></span>
 				submit
 			</button>
+			</Form>
 			<p id= 'ans'>
 				{ans}
 			</p>

@@ -15,49 +15,45 @@ function App() {
       <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
         <li className='nav-item'>
           <Link className="nav-link align-middle px-0" to={`/detect`}>
-             <span className="ms-1 d-none d-sm-inline">Detect text language</span>
+             <p className="fs-5 bi-bootstrap">Detect</p><span className="ms-1 d-none d-sm-inline">Language Detection </span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/correct`}>
-            <span className="ms-1 d-none d-sm-inline">Spell checker and grammar correction</span>
+            <p className="fs-4 bi-table">Grammar</p><span className="ms-1 d-none d-sm-inline">Spell checker and grammar correction</span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/translate`}>
-            <span className="ms-1 d-none d-sm-inline">Translate a piece of text</span>
+            <p className="fs-4 bi-table">Translate</p><span className="ms-1 d-none d-sm-inline">Translate a piece of text</span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/websumm`}>
-            <span className="ms-1 d-none d-sm-inline">Get summary of a web page</span>
-          </Link>
-        </li>
-        <li>
-          <Link className="nav-link align-middle px-0" to={`/detect`}>
-            <span className="ms-1 d-none d-sm-inline">Detect text language</span>
+            <p className="fs-4 bi-table">Page Summary</p><span className="ms-1 d-none d-sm-inline">Get summary of a web page</span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/entity`}>
-            <span className="ms-1 d-none d-sm-inline">entity extraction</span>
+            <p className="fs-4 bi-table">Entity</p><span className="ms-1 d-none d-sm-inline">entity extraction</span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/sentiment`}>
-            <span className="ms-1 d-none d-sm-inline">Perform sentiment analysis on text</span>
+            <p className="fs-4 bi-table">Sentiment</p><span className="ms-1 d-none d-sm-inline">Perform sentiment analysis on text</span>
           </Link>
         </li>
         <li>
           <Link className="nav-link align-middle px-0" to={`/getsumm`}>
-            <span className="ms-1 d-none d-sm-inline">Generate abstractive summary</span>
+            <p className="fs-4 bi-table">Summary</p><span className="ms-1 d-none d-sm-inline">Generate abstractive summary</span>
           </Link>
         </li>
         </ul>
     </div>
     </div>
 
-    <div className='col-auto col-md-9 justify-content-centre'>
+    <div className='col-auto col-md-9'>
+        <div className='container-fluid text-centre'><h1 className='text-centre'>Text Psychic</h1></div>
           <Outlet/>
         </div>
     </div>
