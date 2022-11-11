@@ -10,7 +10,7 @@ const App = lazy(()=>
 	import('./App'));
 const Loading =()=>
 (
-	<div className=' container-fluid text-center'>
+	<div className='bg-light container-fluid text-center'>
 		<div className="spinner-grow text-primary" role="status">
   			<span className="sr-only">Loading...</span>
   		</div>
