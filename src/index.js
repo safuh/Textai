@@ -1,24 +1,58 @@
-import React from 'react';
+import React, {lazy,Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Content from './Content';
-import Websumm from './Websumm';
-import Correct from './Correct';
-import Langdetect from './Langdetect';
-import Getsumm from './Getsumm';
-import Entity from './Entity';
-import Sentiment from './Sentiment';
-import Translate from './Translate';
-import Ans, {loader as AnsLoader,} from './Ans';
-import WebAns, {loader as Webloader} from './WebAns';
-import SentimentAns, {loader as SentimentLoader} from './SentimentAns';
-import {action as SummAction, sentiment as SentimentAction, websumm as WebAction,} from './Actions';
 import {createBrowserRouter, 
 	RouterProvider,
 	Route,} from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
+const App = lazy(()=>
+	import('./App'));
+const Loading =()=>
+(
+	<div className=' container-fluid text-center'>
+		<div className="spinner-grow text-primary" role="status">
+  			<span className="sr-only">Loading...</span>
+  		</div>
+		<div className="spinner-grow text-secondary" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-success" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-danger" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-warning" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-info" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-light" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+		<div className="spinner-grow text-dark" role="status">
+  			<span className="sr-only">Loading...</span>
+		</div>
+  	</div>
+);
+const Content =lazy(()=>
+	import('./Content'));
+const Websumm = lazy(()=>
+	import('./Websumm'));
+const Correct = lazy(()=>
+	import('./Correct'));
+const Langdetect = lazy(()=>
+	import('./Langdetect'));
+const Getsumm = lazy(()=>
+	import('./Getsumm'));
+const Entity = lazy(()=>
+	import('./Entity'));
+const Sentiment = lazy(()=>
+	import('./Sentiment'));
+const Translate = lazy(()=>
+	import('./Translate'));
 const router = createBrowserRouter([
 	{
 		path:'/',
@@ -113,7 +147,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+  	<Suspense fallback=
+  	{
+  		<Loading/>
+  	}>
+    	<RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );
 
